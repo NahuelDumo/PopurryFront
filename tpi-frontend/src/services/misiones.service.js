@@ -1,7 +1,7 @@
 import axios from "axios";
 import config from "bootstrap/js/src/util/config";
 
-const urlResource = "http://localhost:8081/api/productos";
+const urlResource = "https://kiosco-popurri.koyeb.app/api/productos";
 
 async function Buscar(Nombre, Tipo, Precio) {
   if (Nombre !== "") {
