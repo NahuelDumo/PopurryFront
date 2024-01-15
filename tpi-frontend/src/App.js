@@ -14,7 +14,7 @@ return (
             <div className="divBody">
                 <Routes>
                     <Route path="/inicio" element={<Inicio/>}/>
-                    <Route path="/productos" element={<Misiones/>}/>
+                    <Route path="/misiones" element={<Misiones/>}/>
                     <Route path="*" element={<Navigate to='/inicio' replace/>}/>
                 </Routes>
             </div>
