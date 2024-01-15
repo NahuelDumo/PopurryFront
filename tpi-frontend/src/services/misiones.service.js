@@ -21,7 +21,7 @@ async function Buscar(Nombre, Tipo, Precio) {
   } else if (Tipo !== "") {
     list = await BuscarPorTipo(Tipo);
     if (Precio !== 0) {
-      return list.filter(item => item.precio === Precio);
+      return list.filter(item => item.precio >= Precio);
     }
     return list
 
