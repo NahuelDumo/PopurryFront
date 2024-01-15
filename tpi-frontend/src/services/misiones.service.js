@@ -1,19 +1,38 @@
 import axios from "axios";
-import config from "bootstrap/js/src/util/config";
 
 const urlResource = "https://kiosco-popurri.koyeb.app/api/productos";
 
 async function Buscar(Nombre, Tipo, Precio) {
+  let list;
   if (Nombre !== "") {
-    return BuscarPorNombre(Nombre)}
-  if (Tipo !== ""){
-    return BuscarPorTipo(Tipo)
+    list = await BuscarPorNombre(Nombre);
+    if (Tipo !== "") {
+      let list2 = list.filter(item => item.tipo === Tipo);
+      if (Precio !== ""){
+         return list2.filter(item => item.precio >= Precio)
+        }
+    }
+
+    else if (Precio !== 0) {
+      return list.filter(item => item.precio >= Precio);
+    }
+    return list
+
+  } else if (Tipo !== "") {
+    list = await BuscarPorTipo(Tipo);
+    if (Precio !== 0) {
+      return list.filter(item => item.precio === Precio);
+    }
+    return list
+
+  } else if (Precio !== 0) {
+    return BuscarPorPrecio(Precio);
+
+  } else {
+    const resp = await axios.get(urlResource + "/");
+    return resp.data
   }
-  if (Precio !== 0){
-    return BuscarPorPrecio(Precio)
-  }
-  const resp = await axios.get(urlResource + "/");
-  return resp.data;
+
 }
 
 
