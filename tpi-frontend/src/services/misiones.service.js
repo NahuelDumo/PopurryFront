@@ -6,21 +6,21 @@ async function Buscar(Nombre, Tipo, Precio) {
   let list;
   if (Nombre !== "") {
     list = await BuscarPorNombre(Nombre);
-    if (Tipo !== "") {
+    if (Tipo !== "" && list != []) {
       let list2 = list.filter(item => item.tipo === Tipo);
       if (Precio !== ""){
          return list2.filter(item => item.precio >= Precio)
         }
     }
 
-    else if (Precio !== 0) {
+    else if (Precio !== 0 && list != []) {
       return list.filter(item => item.precio >= Precio);
     }
     return list
 
   } else if (Tipo !== "") {
     list = await BuscarPorTipo(Tipo);
-    if (Precio !== 0) {
+    if (Precio !== 0 && list != []) {
       return list.filter(item => item.precio >= Precio);
     }
     return list
