@@ -38,15 +38,6 @@ function Menu() {
           <li className="nav-item">
             <NavLink
               className="nav-link"
-              to="/inicio"
-              onClick={handleMenuItemClick}
-            >
-              Inicio
-            </NavLink>
-          </li>
-          <li className="nav-item">
-            <NavLink
-              className="nav-link"
               to="/misiones"
               onClick={handleMenuItemClick}
             >
