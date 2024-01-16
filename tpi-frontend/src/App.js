@@ -15,7 +15,7 @@ return (
                 <Routes>
                     <Route path="/inicio" element={<Inicio/>}/>
                     <Route path="/misiones" element={<Misiones/>}/>
-                    <Route path="*" element={<Navigate to='/inicio' replace/>}/>
+                    <Route path="*" element={<Navigate to='/misiones' replace/>}/>
                 </Routes>
             </div>
             <Footer/>
