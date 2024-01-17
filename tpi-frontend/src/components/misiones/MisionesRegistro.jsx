@@ -108,7 +108,7 @@ export default function MisionesRegistro({
                   <option value={"Golosinas y galletas"}>
                     Golosinas y galletas
                   </option>
-                  <option value={"Perfumes"}>Perfumes</option>
+      
                   <option value={"Comida"}>Comida (te/cafe/jugos)</option>
                   <option value={"Aromaterapia y Esencias"}>Aromaterapia y Esencias</option>
                 </select>
