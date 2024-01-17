@@ -37,7 +37,6 @@ export default function MisionesBuscar({
                           <option value={"Elementos de Limpieza"}>Elementos de Limpieza</option>
                           <option value={"Gaseosas"}>Bebidas</option>
                           <option value={"Golosinas y galletas"}>Golosinas y galletas</option>
-                          <option value={"Perfumes"}>Perfumes</option>
                           <option value={"Comida"}>Comida (te/café/jugos)</option>
                           <option value={"Aromaterapia y Esencias"}>Aromaterapia y Esencias</option>
                       </select>
