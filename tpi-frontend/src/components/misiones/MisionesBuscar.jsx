@@ -39,6 +39,7 @@ export default function MisionesBuscar({
                           <option value={"Golosinas y galletas"}>Golosinas y galletas</option>
                           <option value={"Perfumes"}>Perfumes</option>
                           <option value={"Comida"}>Comida (te/café/jugos)</option>
+                          <option value={"Aromaterapia y Esencias"}>Aromaterapia y Esencias</option>
                       </select>
                   </div>
               </div>
