@@ -1,3 +1,4 @@
+// Menu.jsx
 import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
 
@@ -14,6 +15,13 @@ function Menu() {
 
   return (
     <nav className="navbar navbar-dark bg-dark navbar-expand-md">
+      <div className="logo-container">
+      <img
+            src="Logotipo Kiosco Simple Rosa y Azul.png"
+            alt="Logo"
+            className="logo-img"
+          />
+      </div>
       <div className="navbar-brand-container">
         <a className="navbar-brand">
           <i className="humble-lettering">POPURRI</i>
@@ -42,6 +50,16 @@ function Menu() {
               onClick={handleMenuItemClick}
             >
               Productos
+            </NavLink>
+          </li>
+
+          <li className="nav-item">
+            <NavLink
+              className="nav-link"
+              to="/misiones"
+              onClick={handleMenuItemClick}
+            >
+              Ventas
             </NavLink>
           </li>
         </ul>

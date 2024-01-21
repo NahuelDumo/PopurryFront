@@ -16,6 +16,15 @@ footer {
 .navbar-brand {
   color: aquamarine;
   font-size: 1.5rem;
+  margin-left: 5px;
+  
+}
+
+
+.logo-img {
+  width: 40px;
+  height: 4%;
+  
 }
 
 .tituloPagina {
@@ -31,6 +40,7 @@ footer {
 .humble-lettering {
   font-family: 'Anton', cursive;
   font-style: normal;
+
 }
 
 /* todos los formularios */
@@ -41,6 +51,7 @@ form {
   margin: 0em 0.5rem 1rem 0.5rem;
   padding: 0.5rem;
   box-shadow: 0.62rem 0.62rem 0.31rem rgb(175, 173, 173);
+
 }
 
 /* espacio en los botones contenidos en un div con esta clase */
@@ -63,10 +74,12 @@ label:not([class^='custom-control']) {
 /* Menu.css */
 .navbar-brand-container {
   display: flex;
-  justify-content: center; /* Centrar horizontalmente */
-  align-items: center; /* Centrar verticalmente */
-  height: 100%; /* Asegurar que ocupa toda la altura del contenedor */
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  
 }
+
 
 
 /* <=576 */

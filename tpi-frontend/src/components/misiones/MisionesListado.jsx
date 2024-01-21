@@ -17,10 +17,10 @@ function MisionesListado({ Items, Modificar, Eliminar }) {
             Items.map((Item) => (
               <tr key={Item.nombre}>
                 <td className="text-end">{Item.nombre}</td>
-                <td className="text-end">
+                <td className="text-center">
                   {Item.tipo === "Gaseosas" ? "Bebidas" : Item.tipo}
                 </td>
-                <td className="text-end">{Item.precio}</td>
+                <td className="text-center">{Item.precio}</td>
                 <td className="text-center text-nowrap">
                   <button
                     className="btn btn-sm btn-outline-primary"
