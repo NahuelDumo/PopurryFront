@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const urlResource = "https://kiosco-popurri.koyeb.app/api/productos";
+const urlResource = "https://popurri-kiosco-production.up.railway.app/api/productos";
 
 async function Buscar(Nombre, Tipo, Precio) {
   let list;
