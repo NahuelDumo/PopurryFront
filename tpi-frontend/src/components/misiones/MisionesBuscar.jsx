@@ -8,83 +8,81 @@ export default function MisionesBuscar({
   };
 
   return (
-      <form name="FormBusqueda" onSubmit={(e) => e.preventDefault()}>
-        <div className="container-fluid">
-          <div className="row">
-            <div className="col-sm-4 col-md-2">
-              <label className="col-form-label">Nombre:</label>
-            </div>
-            <div className="col-sm-8 col-md-4">
-              <input
-                  type="text"
-                  className="form-control"
-                  onChange={(e) => setnombre(e.target.value)}
-                  value={nombre}
-                  autoFocus
-              />
-            </div>
-              <div className="row">
-                  <div className="col-sm-4 col-md-2">
-                      <label className="col-form-label">Tipo Producto:</label>
-                  </div>
-                  <div className="col-sm-8 col-md-4">
-                      <select
-                          className="form-control"
-                          onChange={(e) => settipo(e.target.value)}
-                          value={tipo}
-                      >
-                          <option value={""}>Todos</option>
-                          <option value={"Elementos de Limpieza"}>Elementos de Limpieza</option>
-                          <option value={"Gaseosas"}>Bebidas</option>
-                          <option value={"Golosinas y galletas"}>Golosinas y galletas</option>
-                          <option value={"Comida"}>Comida (te/café/jugos)</option>
-                          <option value={"Aromaterapia y Esencias"}>Aromaterapia y Esencias</option>
-                      </select>
-                  </div>
-              </div>
-            <div className="col-sm-4 col-md-2">
-              <label className="col-form-label">Precio:</label>
-            </div>
-              <div className="col-sm-8 col-md-4">
-                  <input
-                      type="float"
-                      className="form-control"
-                      onChange={(e) => setprecio(parseFloat(e.target.value) || 0)}
-                      value={precio}
-                  />
-              </div>
-
+    <form name="FormBusqueda" onSubmit={(e) => e.preventDefault()}>
+      <div className="container-fluid">
+        <div className="row">
+          <div className="col-sm-4 col-md-2">
+            <label className="col-form-label">Nombre:</label>
           </div>
-
-
-
-          <hr />
-
-          {/* Botones */}
-          <div className="row">
-            <div className="col text-center botones">
-              <button
-                  type="button"
-                  className="btn btn-primary"
-                  onClick={() => {
-                    const resultados = Buscar();
-                    if (resultados.length === 0) {
-                      mostrarMensaje("No se encontraron resultados.");
-                    }
-                  }}
-              >
-                <i className="fa fa-search"> </i> Buscar
-              </button>
-              <button
-                  type="button"
-                  className="btn btn-success"
-                  onClick={() => Agregar()}
-              >
-                <i className="fa fa-plus"> </i> Agregar
-              </button>
-            </div>
+          <div className="col-sm-8 col-md-4">
+            <input
+              type="text"
+              className="form-control"
+              onChange={(e) => setnombre(e.target.value)}
+              value={nombre}
+              autoFocus
+            />
           </div>
         </div>
-      </form>
+        <div className="row">
+          <div className="col-sm-4 col-md-2">
+            <label className="col-form-label">Tipo Producto:</label>
+          </div>
+          <div className="col-sm-8 col-md-4">
+            <select
+              className="form-control"
+              onChange={(e) => settipo(e.target.value)}
+              value={tipo}
+            >
+              <option value={""}>Todos</option>
+              <option value={"Elementos de Limpieza"}>Elementos de Limpieza</option>
+              <option value={"Gaseosas"}>Bebidas</option>
+              <option value={"Golosinas y galletas"}>Golosinas y galletas</option>
+              <option value={"Comida"}>Comida (te/café/jugos)</option>
+              <option value={"Aromaterapia y Esencias"}>Aromaterapia y Esencias</option>
+            </select>
+          </div>
+        </div>
+        <div className="row mb-3">
+          <div className="col-sm-4 col-md-2">
+            <label className="col-form-label">Precio:</label>
+          </div>
+          <div className="col-sm-8 col-md-4">
+            <input
+              type="number"
+              step="0.01"
+              className="form-control"
+              onChange={(e) => setprecio(parseFloat(e.target.value) || 0)}
+              value={precio}
+            />
+          </div>
+        </div>
+        <hr />
+        <div className="row">
+          <div className="col text-center">
+            <button
+              type="button"
+              className="btn btn-primary me-2"
+              onClick={() => {
+                const resultados = Buscar();
+                if (resultados.length === 0) {
+                  mostrarMensaje("No se encontraron resultados.");
+                }
+              }}
+            >
+              <i className="fa fa-search"></i> Buscar
+            </button>
+            <button
+              type="button"
+              className="btn btn-success"
+              onClick={() => Agregar()}
+            >
+              <i className="fa fa-plus"></i> Agregar
+            </button>
+          </div>
+        </div>
+      </div>
+    </form>
   );
+  
 }
