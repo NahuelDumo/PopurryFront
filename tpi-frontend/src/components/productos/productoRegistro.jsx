@@ -72,11 +72,11 @@ export default function MisionesRegistro({
               <div className="col-sm-8 col-md-6">
                 <input
                     type="number"
-                    step=".01"
+                    step="0.1"
                     {...register("precio", {
                       required: "Precio es requerido",
                       min: {
-                        value: 0.01,
+                        value: 1,
                         message: "El Precio debe ser mayor a 0",
                       },
                     })}
@@ -96,7 +96,7 @@ export default function MisionesRegistro({
               <div className="col-sm-8 col-md-6">
                 <input
                     type="number"
-                    step=".01"
+                    step="1"
                     {...register("stock", {
                       required: "Stock es requerido",
                       min: {
