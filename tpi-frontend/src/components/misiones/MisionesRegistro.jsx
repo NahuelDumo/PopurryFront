@@ -86,6 +86,30 @@ export default function MisionesRegistro({
                 <div className="invalid-feedback">{errors?.precio?.message}</div>
               </div>
             </div>
+            {/* Stock */}
+            <div className="row">
+              <div className="col-sm-4 col-md-3 offset-md-1">
+                <label className="col-form-label" htmlFor="stock">
+                  Stock<span className="text-danger">*</span>:
+                </label>
+              </div>
+              <div className="col-sm-8 col-md-6">
+                <input
+                    type="number"
+                    step=".01"
+                    {...register("stock", {
+                      required: "Stock es requerido",
+                      min: {
+                        value: 1,
+                        message: "El Stock debe ser mayor a 0",
+                      },
+                    })}
+                    className={`form-control ${errors?.stock ? "is-invalid" : ""}`}
+
+                />
+                <div className="invalid-feedback">{errors?.stock?.message}</div>
+              </div>
+            </div>
 
             {/* Tipo Producto */}
             <div className="row">

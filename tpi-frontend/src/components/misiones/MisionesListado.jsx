@@ -9,6 +9,7 @@ function MisionesListado({ Items, Modificar, Eliminar }) {
             <th className="text-center">Nombre</th>
             <th className="text-center">Tipo</th>
             <th className="text-center">Precio</th>
+            <th className="text-center">Stock</th>
             <th className="text-center">Acciones</th>
           </tr>
         </thead>
@@ -21,6 +22,7 @@ function MisionesListado({ Items, Modificar, Eliminar }) {
                   {Item.tipo === "Gaseosas" ? "Bebidas" : Item.tipo}
                 </td>
                 <td className="text-center">{Item.precio}</td>
+                <td className="text-center">{Item.stock}</td>
                 <td className="text-center text-nowrap">
                   <button
                     className="btn btn-sm btn-outline-primary"

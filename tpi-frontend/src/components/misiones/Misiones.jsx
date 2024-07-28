@@ -17,6 +17,7 @@ function Misiones() {
   const [nombre, setnombre] = useState("");
   const [tipo, settipo] = useState("");
   const [precio, setprecio] = useState(0);
+  const [stock, setstock] = useState(0);
 
   const [Items, setItems] = useState(null);
   const [Item, setItem] = useState(null);
@@ -63,6 +64,7 @@ function Misiones() {
       nombre: null,
       tipo: null,
       precio: 0,
+      stock: 1
     });
   }
 
@@ -103,6 +105,8 @@ function Misiones() {
                 settipo={settipo}
                 precio={precio}
                 setprecio={setprecio}
+                stock={stock}
+                setstock={setstock}
                 Buscar={Buscar}
                 Agregar={Agregar}
             />
