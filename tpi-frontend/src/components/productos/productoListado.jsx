@@ -19,7 +19,7 @@ function MisionesListado({ Items, Modificar, Eliminar }) {
               <tr key={Item.nombre}>
                 <td className="text-end">{Item.nombre}</td>
                 <td className="text-center">
-                  {Item.tipo === "Gaseosas" ? "Bebidas" : Item.tipo}
+                  {Item.tipo}
                 </td>
                 <td className="text-center">{Item.precio}</td>
                 <td className="text-center">{Item.stock}</td>

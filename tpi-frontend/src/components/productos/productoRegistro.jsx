@@ -128,7 +128,7 @@ export default function MisionesRegistro({
                   <option value={"Elementos de Limpieza"}>
                     Elementos de Limpieza
                   </option>
-                  <option value={"Gaseosas"}>Bebidas</option>
+                  <option value={"Bebidas"}>Bebidas</option>
                   <option value={"Golosinas y galletas"}>
                     Golosinas y galletas
                   </option>
