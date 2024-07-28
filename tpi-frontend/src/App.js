@@ -3,7 +3,7 @@ import { BrowserRouter, Route, Routes, Navigate } from "react-router-dom";
 import Menu from './components/Menu';
 import Footer from './components/Footer';
 
-import { Misiones } from "./components/misiones/Misiones";
+import { Productos } from "./components/productos/Producto";
 
 function App() {
 return (
@@ -12,8 +12,8 @@ return (
             <Menu/>
             <div className="divBody">
                 <Routes>
-                    <Route path="/misiones" element={<Misiones/>}/>
-                    <Route path="*" element={<Navigate to='/misiones' replace/>}/>
+                    <Route path="/productos" element={<Productos/>}/>
+                    <Route path="*" element={<Navigate to='/productos' replace/>}/>
                 </Routes>
             </div>
             <Footer/>

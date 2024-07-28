@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from "react";
-import MisionesBuscar from "./MisionesBuscar";
-import MisionesListado from "./MisionesListado";
-import MisionesRegistro from "./MisionesRegistro";
+import MisionesBuscar from "./productoBuscar";
+import MisionesListado from "./productoListado";
+import MisionesRegistro from "./productoRegistro";
 import { misionesServices } from "../../services/misiones.service";
 
-function Misiones() {
+function Productos() {
   const TituloAccionABMC = {
     A: "(Agregar)",
     B: "(Eliminar)",
@@ -139,4 +139,4 @@ function Misiones() {
   );
 }
 
-export { Misiones };
+export { Productos };

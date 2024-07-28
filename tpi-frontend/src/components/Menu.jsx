@@ -53,15 +53,7 @@ function Menu() {
             </NavLink>
           </li>
 
-          <li className="nav-item">
-            <NavLink
-              className="nav-link"
-              to="/misiones"
-              onClick={handleMenuItemClick}
-            >
-              Ventas
-            </NavLink>
-          </li>
+          
         </ul>
       </div>
     </nav>
