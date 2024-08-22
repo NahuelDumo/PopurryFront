@@ -135,6 +135,7 @@ export default function MisionesRegistro({
       
                   <option value={"Comida"}>Comida (te/cafe/jugos)</option>
                   <option value={"Aromaterapia y Esencias"}>Aromaterapia y Esencias</option>
+                  <option value={"Articulos Varios"}>Articulos Varios</option>
                 </select>
               </div>
             </div>
