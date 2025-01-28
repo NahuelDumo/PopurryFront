@@ -64,7 +64,8 @@ function Productos() {
       nombre: null,
       tipo: null,
       precio: 0,
-      stock: 1
+      stock: 1,
+      precioDeLista:0
     });
   }
 

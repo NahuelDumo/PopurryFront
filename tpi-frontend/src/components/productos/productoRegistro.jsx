@@ -110,6 +110,30 @@ export default function MisionesRegistro({
                 <div className="invalid-feedback">{errors?.stock?.message}</div>
               </div>
             </div>
+            {/* Precio de Lista*/}
+            <div className="row">
+              <div className="col-sm-4 col-md-3 offset-md-1">
+                <label className="col-form-label" htmlFor="precioDeLista">
+                  Precio de Lista<span className="text-danger">*</span>:
+                </label>
+              </div>
+              <div className="col-sm-8 col-md-6">
+                <input
+                    type="number"
+                    step="0.1"
+                    {...register("precioDeLista", {
+                      required: "Precio de lista es requerido",
+                      min: {
+                        value: 1,
+                        message: "El Precio de Lista debe ser mayor a 0",
+                      },
+                    })}
+                    className={`form-control ${errors?.precioDeLista ? "is-invalid" : ""}`}
+
+                />
+                <div className="invalid-feedback">{errors?.precioDeLista?.message}</div>
+              </div>
+            </div>
 
             {/* Tipo Producto */}
             <div className="row">
@@ -136,6 +160,9 @@ export default function MisionesRegistro({
                   <option value={"Comida"}>Comida (te/cafe/jugos)</option>
                   <option value={"Aromaterapia y Esencias"}>Aromaterapia y Esencias</option>
                   <option value={"Articulos Varios"}>Articulos Varios</option>
+                  <option value={"Mascotas"}>Mascotas</option>
+                  <option value={"Cotillon"}>Cotillon</option>
+                  <option value={"Articulos de piscina"}>Artículos de piscina</option>
                 </select>
               </div>
             </div>
